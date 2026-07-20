@@ -1,0 +1,71 @@
+# EDGE Drishti — Python Dependencies
+# Tested on Python 3.11 and 3.12 on Windows and Linux
+# Run:  pip install setuptools wheel --upgrade  FIRST, then  pip install -r requirements.txt
+
+# ── Core setup (needed before anything else) ─────────────────────────────────
+setuptools>=69.0.0
+wheel>=0.43.0
+
+# ── Web Framework ─────────────────────────────────────────────────────────────
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.9
+starlette>=0.37.0
+
+# ── Database ──────────────────────────────────────────────────────────────────
+sqlalchemy>=2.0.30
+alembic>=1.13.1
+aiofiles>=23.2.1
+
+# ── Security / Crypto ─────────────────────────────────────────────────────────
+cryptography>=42.0.0
+argon2-cffi>=23.1.0
+bcrypt>=4.1.2
+python-jose[cryptography]>=3.3.0
+
+# ── Data / Validation ─────────────────────────────────────────────────────────
+pydantic>=2.7.0
+pydantic-settings>=2.3.0
+
+# ── Computer Vision ───────────────────────────────────────────────────────────
+# opencv-python-headless is smaller and works on servers without a display
+opencv-python-headless>=4.9.0.80
+numpy>=1.26.0
+Pillow>=10.3.0
+
+# ── AI / ML  (install manually if you need GPU support) ──────────────────────
+# torch and ultralytics are large; install separately for GPU variant:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121   (CUDA 12.1)
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu     (CPU only)
+# Then:  pip install ultralytics
+#
+# The app will run fine WITHOUT these — AI models will self-disable gracefully.
+# Uncomment the lines below to auto-install CPU versions (slow first run):
+torch>=2.3.0
+torchvision>=0.18.0
+ultralytics>=8.2.0
+
+# ── Face Recognition (OPTIONAL — requires cmake + C++ build tools on Windows)──
+# Install manually:
+#   Windows: Install VS Build Tools first, then:  pip install cmake dlib face-recognition
+#   Linux:   sudo apt install cmake libdlib-dev && pip install dlib face-recognition
+# insightface>=0.7.3   # alternative to face-recognition, also needs cmake
+
+# ── System / Hardware Monitoring ─────────────────────────────────────────────
+psutil>=5.9.8
+# pynvml is optional — only needed for NVIDIA GPU monitoring
+pynvml>=11.5.0
+
+# ── Alerting ──────────────────────────────────────────────────────────────────
+python-telegram-bot>=21.0
+httpx>=0.27.0      # used by telegram bot and for HTTP health checks
+
+# ── Local Network Discovery (mDNS) ───────────────────────────────────────
+zeroconf>=0.132.0  # broadcasts edgedrishti.local while the app is running
+
+# ── Rate Limiting ─────────────────────────────────────────────────────────────
+slowapi>=0.1.9
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.1
+pytz>=2024.1

@@ -1,0 +1,106 @@
+# Node / Next.js
+node_modules/
+.next/
+out/
+tsconfig.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Python Virtual Environments & Packages
+venv/
+.venv/
+env/
+.env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Python Caches & Compiled bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.nosexy
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# EDGE Drishti Database & Local State
+backend/.data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Large AI Models / Video Recordings
+*.pt
+*.pth
+*.onnx
+yolov8n.pt
+*.mp4
+*.avi
+*.mkv
+
+# Environment Variables & Sensitive Credentials
+.env
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.pub
+
+# OS Files
+.DS_Store
+.DS_Store?/
+tsconfig.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Python Virtual Environments & Packages
+venv/
+.venv/
+env/
+.env/
+ENV/
+build/
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Sandbox Internal Files
+__v0_runtime_loader.js
+__v0_devtools.tsx
+__v0_jsx-dev-runtime.ts
+.snowflake/
+.v0-trash/
+.vercel/
